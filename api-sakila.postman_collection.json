@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "59340951-9ef1-4abf-a007-695c2b23173b",
+		"name": "api-sakila",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "actor",
+			"item": [
+				{
+					"name": "getlist",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api-sakila}}/api/actors",
+							"host": [
+								"{{api-sakila}}"
+							],
+							"path": [
+								"api",
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getbyid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api-sakila}}/api/actors/3",
+							"host": [
+								"{{api-sakila}}"
+							],
+							"path": [
+								"api",
+								"actors",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Tom\",\r\n    \"last_name\": \"Holland\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-sakila}}/api/actors/",
+							"host": [
+								"{{api-sakila}}"
+							],
+							"path": [
+								"api",
+								"actors",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Hoang\",\r\n    \"last_name\": \"Nguyen\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-sakila}}/api/actors/1",
+							"host": [
+								"{{api-sakila}}"
+							],
+							"path": [
+								"api",
+								"actors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-sakila}}/api/actors/3",
+							"host": [
+								"{{api-sakila}}"
+							],
+							"path": [
+								"api",
+								"actors",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "getlist",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api-sakila}}/api/customers",
+							"host": [
+								"{{api-sakila}}"
+							],
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getbyid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api-sakila}}/api/customers/1",
+							"host": [
+								"{{api-sakila}}"
+							],
+							"path": [
+								"api",
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"store_id\": 1,\r\n    \"first_name\": \"Hoang\",\r\n    \"last_name\": \"Nguyen\",\r\n    \"email\": \"hoangnguyen@gmail.com\",\r\n    \"address_id\": 4,\r\n    \"active\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-sakila}}/api/customers",
+							"host": [
+								"{{api-sakila}}"
+							],
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"store_id\": 1,\r\n    \"first_name\": \"Hoang\",\r\n    \"last_name\": \"Nguyen\",\r\n    \"email\": \"hoangnguyen@gmail.com\",\r\n    \"address_id\": 4,\r\n    \"active\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-sakila}}/api/customers/1",
+							"host": [
+								"{{api-sakila}}"
+							],
+							"path": [
+								"api",
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api-sakila}}/api/customers/1",
+							"host": [
+								"{{api-sakila}}"
+							],
+							"path": [
+								"api",
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api-sakila",
+			"value": "http://localhost:3000"
+		}
+	]
+}
