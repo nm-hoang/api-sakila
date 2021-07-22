@@ -15,7 +15,7 @@ router.get('/:id', async function (req, res) {
 
     if (actor < 1) {
         res.status(400).json({
-            "message": "Not found"
+            "message": "Can not find !"
         });
     }
     res.json(actor)
@@ -45,6 +45,11 @@ router.patch('/:id', async function (req, res) {
 //delete
 router.delete('/:id', async function (req, res) {
     const id = req.params.id || 0;
+    if(id === 0){
+        return res.json({
+            message: 'Id invalid'
+        })
+    }
     const result = await actorModel.delete(id)
     if(result === 0){
         res.status(400).json({
@@ -55,5 +60,4 @@ router.delete('/:id', async function (req, res) {
         "message": "Delete successfull"
     });
 })
-
 module.exports = router
