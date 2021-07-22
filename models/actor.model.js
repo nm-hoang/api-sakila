@@ -21,7 +21,8 @@ module.exports = {
         return db('actor').where('actor_id', id).update(actor)
     },
 
-    delete(id) {
-        return db('actor').where('actor_id', id).del()
+    async delete(id) {
+        await db('film_actor').where('actor_id', id).del()
+        return await db('actor').where('actor_id', id).del()
     }
 }
