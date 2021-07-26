@@ -3,6 +3,16 @@ const morgan = require('morgan')
 require('express-async-errors')
 const app = express()
 
+const cors = require('cors')
+
+
+app.use(
+    cors({
+        origin:"*",
+        credentials: true
+    })
+)
+
 app.use(morgan('dev'))
 app.use(express.json())
 const PORT = 3000;
