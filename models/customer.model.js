@@ -21,7 +21,8 @@ module.exports = {
         return db('customer').where('customer_id', id).update(customer)
     },
 
-    delete(id) {
-        return db('customer').where('customer_id', id).del()
+    async delete(id) {
+        await db('payment').where('customer_id', id).del()
+        return await db('customer').where('customer_id', id).del()
     }
 }

@@ -33,7 +33,7 @@ router.post('/', validate(schema), async function (req, res) {
 })
 
 //update
-router.patch('/:id', async function (req, res) {
+router.patch('/:id', validate(schema), async function (req, res) {
     const id = req.params.id;
     const actor = req.body
     const result = await actorModel.update(id, actor)
@@ -50,7 +50,7 @@ router.delete('/:id', async function (req, res) {
     const id = req.params.id || 0;
     if (id === 0) {
         return res.json({
-            message: 'Id invalid'
+            message: 'ID invalid'
         })
     }
     const result = await actorModel.delete(id)
